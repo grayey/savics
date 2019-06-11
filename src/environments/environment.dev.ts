@@ -6,11 +6,11 @@
 // const BASE_URL = 'http://localhost:8000/api';
 export const environment = {
   production: false,
-
   API_KEY: '',
-  APP_BASE_URL: '/talk2me-front',
+  APP_BASE_URL: '',
   API_URL: {
-    prefix: 'http://mentorandi.com/talk2me-server/public/api/',
+    // prefix: 'http://mentorandi.com/talk2me-server/public/api/',
+    prefix: 'http://localhost:8000/api/',
     categories: 'categories',
     mentees: 'mentees',
     mentors: 'mentors'
