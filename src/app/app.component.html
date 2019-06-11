@@ -161,6 +161,7 @@
                   <th>Age</th>
                   <th>City</th>
                   <th>Country</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -172,12 +173,13 @@
                 </tr>
                 <tr *ngFor="let medical_record of allMedicalRecords; let i=index">
                   <td class="text-bold">{{i+1}}.</td>
-                  <td>{{medical_record?.name}}</td>
-                  <td><span
-                    [ngClass]="setClassByNumber(medical_record?.is_active)">{{medical_record?.is_active?"Active":"Inactive"}}</span>
+                  <td>{{medical_record?.fullName}}</td>
+                  <td>
+                    {{medical_record?.gender}}
                   </td>
-                  <td>{{medical_record?.created_at | date:"medium"}}</td>
-                  <td>{{medical_record?.updated_at | date:"medium"}}</td>
+                  <td>{{medical_record?.age}}</td>
+                  <td>{{medical_record?.city}}</td>
+                  <td>{{medical_record?.country}}</td>
                   <td>
                     <button class="btn btn-primary btn-sm ml-2" (click)="viewMedicalRecord(i)"><i class="fa fa-pencil"></i></button>
                     <!--<button class="btn btn-info btn-sm ml-2"><i class="fa fa-eye"></i></button>-->
